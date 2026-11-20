@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="VeiculosApp.Core/VeiculosApp.Core.csproj" />
+  <Project Path="VeiculosApp.Tests/VeiculosApp.Tests.csproj" />
+  <Project Path="VeiculosApp.UI/VeiculosApp.UI.csproj" />
+</Solution>
