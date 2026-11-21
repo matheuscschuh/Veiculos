@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace VeiculosApp.Core.Conexao
+namespace VeiculosApp.Core.ConexaoBanco
 {
     public class Conexao
     {
-
         private readonly string _connectionString;
 
         public Conexao(string connectionString)
