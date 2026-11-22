@@ -30,16 +30,16 @@ namespace VeiculosApp.Core.Repositories
             cmd.Parameters.AddWithValue("@modelo", NpgsqlDbType.Varchar, veiculo.Modelo);
             cmd.Parameters.AddWithValue("@ano", NpgsqlDbType.Integer, veiculo.Ano);
             cmd.Parameters.AddWithValue("@codigo_marca", NpgsqlDbType.Integer, veiculo.Marca.Codigo);
-            
+            cmd.Parameters.AddWithValue("@tipo", NpgsqlDbType.Varchar, veiculo.Tipo);
+
+
             if (veiculo is Carro carro)
             {
-                cmd.Parameters.AddWithValue("@tipo", NpgsqlDbType.Varchar, "Carro");
                 cmd.Parameters.AddWithValue("@possui_ar_condicionado", NpgsqlDbType.Boolean, carro.PossuiArCondicionado);
                 cmd.Parameters.AddWithValue("@possui_bau", NpgsqlDbType.Boolean, DBNull.Value);
             }
             else if (veiculo is Moto moto)
             {
-                cmd.Parameters.AddWithValue("@tipo", NpgsqlDbType.Varchar, "Moto");
                 cmd.Parameters.AddWithValue("@possui_bau", NpgsqlDbType.Boolean, moto.PossuiBau);
                 cmd.Parameters.AddWithValue("@possui_ar_condicionado", NpgsqlDbType.Boolean, DBNull.Value);
             }

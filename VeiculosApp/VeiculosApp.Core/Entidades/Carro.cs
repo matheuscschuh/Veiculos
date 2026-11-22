@@ -7,6 +7,7 @@ namespace VeiculosApp.Core.Entidades
     public class Carro : Veiculo
     {
         public bool PossuiArCondicionado { get; private set; }
+        public override string Tipo => "Carro";
 
         public Carro(int codigo, string placa, int ano, string modelo, Marca marca, bool possuiArCondicionado)
             : base(codigo, placa, ano, modelo, marca) 

@@ -11,6 +11,7 @@ namespace VeiculosApp.Core.Entidades
         public int Ano { get; private set; }
         public string? Modelo { get; private set; }
         public Marca Marca { get; private set; }
+        public abstract string Tipo { get; }
 
         protected Veiculo(int codigo, string placa, int ano, string modelo, Marca marca)
         {
