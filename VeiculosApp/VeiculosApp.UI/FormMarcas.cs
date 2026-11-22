@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using VeiculosApp.Core.Repositories;
+using VeiculosApp.UI.Utils;
 using VeiculosApp.Core.Services;
 using VeiculosApp.Core.Entidades;
 using VeiculosApp.Core.Exceptions;
@@ -32,6 +32,7 @@ namespace VeiculosApp.UI
             }
             catch (Exception ex)
             {
+                Logger.Registrar(ex);
                 MessageBox.Show("Não foi possível carregar as marcas. Tente novamente.");
             }
         }
@@ -78,11 +79,12 @@ namespace VeiculosApp.UI
                 await CarregarGradeAsync();
             }
             catch (RegraNegocioException ex)
-            {
+            { 
                 MessageBox.Show(ex.Message);
             }
             catch (Exception ex)
             {
+                Logger.Registrar(ex);
                 MessageBox.Show("Ocorreu um erro inesperado. Tente novamente");
             }
 
@@ -119,8 +121,10 @@ namespace VeiculosApp.UI
             {
                 MessageBox.Show(ex.Message);
             }
+
             catch (Exception ex)
             {
+                Logger.Registrar(ex);
                 MessageBox.Show("Ocorreu um erro inesperado. Tente novamente");
             }
         }
