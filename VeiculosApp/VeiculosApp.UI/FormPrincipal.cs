@@ -23,5 +23,11 @@ namespace VeiculosApp.UI
             using var formMarcas = new FormMarcas(_serviceMarca);
             formMarcas.ShowDialog();
         }
+
+        private void btnVeiculos_Click(object sender, EventArgs e)
+        {
+            using var formVeiculos = new FormVeiculos(_serviceMarca, _serviceVeiculo);
+            formVeiculos.ShowDialog();
+        }
     }
 }

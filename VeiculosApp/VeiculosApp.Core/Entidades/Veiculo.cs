@@ -12,6 +12,7 @@ namespace VeiculosApp.Core.Entidades
         public string? Modelo { get; private set; }
         public Marca Marca { get; private set; }
         public abstract string Tipo { get; }
+        public abstract string Descricao { get; }
 
         protected Veiculo(int codigo, string placa, int ano, string modelo, Marca marca)
         {
@@ -21,9 +22,5 @@ namespace VeiculosApp.Core.Entidades
             Modelo = modelo?.Trim();
             Marca = marca;
         }
-
-        public abstract string Descricao();
-      
-
     }
 }

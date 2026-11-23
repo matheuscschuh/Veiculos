@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMarcas = new Button();
+            btnMarcas = new Button();
             btnVeiculos = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnMarcas
             // 
-            this.btnMarcas.Location = new Point(165, 148);
-            this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new Size(94, 29);
-            this.btnMarcas.TabIndex = 0;
-            this.btnMarcas.Text = "Marcas";
-            this.btnMarcas.UseVisualStyleBackColor = true;
-            this.btnMarcas.Click += this.btnMarcas_Click;
+            btnMarcas.Location = new Point(165, 148);
+            btnMarcas.Name = "btnMarcas";
+            btnMarcas.Size = new Size(94, 29);
+            btnMarcas.TabIndex = 0;
+            btnMarcas.Text = "Marcas";
+            btnMarcas.UseVisualStyleBackColor = true;
+            btnMarcas.Click += btnMarcas_Click;
             // 
             // btnVeiculos
             // 
@@ -50,23 +51,37 @@
             btnVeiculos.TabIndex = 1;
             btnVeiculos.Text = "Veículos";
             btnVeiculos.UseVisualStyleBackColor = true;
+            btnVeiculos.Click += btnVeiculos_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(222, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(198, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Gerenciamento de Veículos";
             // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(657, 326);
+            Controls.Add(label1);
             Controls.Add(btnVeiculos);
-            Controls.Add(this.btnMarcas);
+            Controls.Add(btnMarcas);
             Name = "FormPrincipal";
             Text = "Gerenciamento de Veículos";
             Load += FormPrincipal_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnMarcas;
         private Button btnVeiculos;
+        private Label label1;
     }
 }

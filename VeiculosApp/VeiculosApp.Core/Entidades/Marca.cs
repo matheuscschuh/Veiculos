@@ -15,5 +15,6 @@ namespace VeiculosApp.Core.Entidades
             Nome = nome;
         }
 
+        public override string ToString() => Nome;
     }
 }
