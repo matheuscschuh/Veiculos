@@ -3,6 +3,9 @@ CREATE TABLE IF NOT EXISTS marcas (
 	nome VARCHAR(50) NOT NULL UNIQUE CHECK (TRIM(nome) <> '')
 );
 
+CREATE UNIQUE INDEX IF NOT EXISTS ux_marcas_nome
+    ON marcas (LOWER(TRIM(nome)));
+
 CREATE TABLE IF NOT EXISTS veiculos (
 	codigo SERIAL PRIMARY KEY,
 	placa VARCHAR(15) NOT NULL UNIQUE CHECK (TRIM(placa) <> '' AND placa = UPPER(placa)),
