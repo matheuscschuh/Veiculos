@@ -85,7 +85,7 @@ Edite o arquivo `VeiculosApp/VeiculosApp.UI/appsettings.json` e informe o usuár
 ```json
 {
   "ConnectionStrings": {
-    "VeiculosDb": "Host=localhost;Port=5432;Database=veiculos_db;Username=postgres;Password=SUA_SENHA"
+    "VeiculosDb": "Host=localhost;Port=5432;Database=veiculos_db;Username=postgres;Password=definido-no-user-secrets"
   }
 }
 ```
